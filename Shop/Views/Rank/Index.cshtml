@@ -1,0 +1,27 @@
+﻿@using Shop.Models.Entities
+@model IEnumerable<Rank>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="widht=device-widht" />
+        <title>List</title>
+    </head>
+    <body>
+        <h2>Все ранги</h2>
+        @{
+            foreach(var Rank in Model)
+            {
+                <div>
+                    <h3>Ранг: @Rank.Name</h3>
+                    <p>Описание: @Rank.Description</p>
+                </div>
+            }
+        }
+    </body>
+</html>
